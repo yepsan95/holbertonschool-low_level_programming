@@ -1,8 +1,15 @@
 #include <stdio.h>
 
-/* This script prints a specific string with the puts() command */
+/**
+ * main - Primary function in C
+ * Return: 0
+ */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
+
+	/**
+	 * Return: 0
+	 */
 	return (0);
 }
