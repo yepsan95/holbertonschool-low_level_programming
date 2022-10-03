@@ -11,6 +11,6 @@ int main(void)
 		sizeof(int),
 		sizeof(long int),
 		sizeof(long long int),
-		sizeof(float))
-	return (0)
+		sizeof(float));
+	return (0);
 }
