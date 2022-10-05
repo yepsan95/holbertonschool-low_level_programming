@@ -19,7 +19,7 @@ int main(void)
 			if (ch1 < ch2)
 			{	putchar(ch1);
 				putchar(ch2);
-				if (!(ch1 == 56 && ch2 ==57))
+				if (!(ch1 == 56 && ch2 == 57))
 				{
 					putchar(',');
 					putchar(32);
