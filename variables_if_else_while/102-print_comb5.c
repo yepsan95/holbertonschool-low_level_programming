@@ -31,7 +31,7 @@ int main(void)
 						putchar(32);
 						putchar(ch2a);
 						putchar(ch2b);
-						if (!(ch1a == 9 && ch1b == 8))
+						if (!(ch1a == 57 && ch1b == 56 && ch2a == 57 && ch2b == 57))
 						{
 							putchar(',');
 							putchar(32);
