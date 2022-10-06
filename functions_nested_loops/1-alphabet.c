@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include "main.h"
+#include <unistd.h>
+
 /**
  * main - C primary function
  * Return: 0
