@@ -8,7 +8,14 @@
 void print_alphabet_x10(void)
 {
 	int n;
+	int m;
 
-	for (n = 0; n <= 9; n++)
-		print_alphabet();
+	for (m = 0; m <= 9; m++)
+	{
+		for (n = 97; n <= 122; n++)
+		{
+			_putchar(n);
+		}
+		_putchar(10);
+	}
 }
