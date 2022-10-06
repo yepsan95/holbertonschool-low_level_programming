@@ -2,8 +2,8 @@
 #include "main.h"
 
 /**
- * main - C primary function
- * Return: 0
+ * print_alphabet - prints alphabet in lowercase
+ * Return: void
  */
 void print_alphabet(void)
 {
