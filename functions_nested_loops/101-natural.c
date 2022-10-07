@@ -3,7 +3,7 @@
 /**
  * main - C main function
  *
- * Return: sum
+ * Return: 0
  */
 int main(void)
 {
@@ -18,5 +18,5 @@ int main(void)
 		}
 	}
 	printf("%d\n", sum);
-	return (sum);
+	return (0);
 }
