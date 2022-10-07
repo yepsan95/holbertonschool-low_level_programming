@@ -4,10 +4,12 @@
  * print_sign - Evaluates if a number is positive or negative
  * @n: number to be evaluated
  *
- * Return: int
+ * Return: 0
  */
 int print_sign(int n)
 {
+	int n;
+
 	if (n > 0)
 	{
 		_putchar('+');
