@@ -29,7 +29,8 @@ void times_table(void)
 				d1 = -16;
 				d2 = n;
 			}
-			_putchar(d1 + 48);
+			if (i != 0)
+				_putchar(d1 + 48);
 			_putchar(d2 + 48);
 			if (i == 9)
 			{
