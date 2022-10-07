@@ -6,10 +6,15 @@
  * @n: number to ve proccessed
  * Return: 0
  */
-int _abs(int n)
+int print_last_digit(int n)
 {
-	int d = (n % 10) + 48;
-	
-	_putchar(d);
+	int d;
+
+	if (n < 0)
+		d = (n - n * 2) % 10;
+
+		_putchar(d);
+	else
+		_putchar(d);
 	return (0);
 }
