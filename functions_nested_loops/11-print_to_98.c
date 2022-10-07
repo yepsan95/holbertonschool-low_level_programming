@@ -48,8 +48,10 @@ void print_to_98(int n)
 			_putchar(48);
 		}
 		if (r != 98)
-		_putchar(',');
-		_putchar(32);
+		{	
+			_putchar(',');
+			_putchar(32);
+		}
 	}
 	_putchar(10);
 }
