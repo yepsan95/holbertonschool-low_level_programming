@@ -17,13 +17,13 @@ int main(void)
 	
 	for (i = 0; i < 98; i++)
 	{
-		if (z < 429496729)
+		if (z < 7540113804746346429)
 		{
 			x = y;
 			y = z;
 			z = x + y;
 			a = (double)x / 10000000000;
-			b = (double)y / 100000000000;
+			b = (double)y / 10000000000;
 			c = (double)z / 10000000000;
 			printf("%ld", z);
 		}
