@@ -32,7 +32,7 @@ int main(void)
 			a = b;
 			b = c;
 			c = a + b;
-			printf("%Lf", c);
+			printf("%Lf", (c * 1000000));
 		}
 		if (i != 97)
 		{
