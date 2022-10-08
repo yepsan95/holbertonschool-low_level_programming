@@ -22,9 +22,9 @@ int main(void)
 			x = y;
 			y = z;
 			z = x + y;
-			a = (long double)x / 100000;
-			b = (long double)y / 100000;
-			c = (long double)z / 100000;
+			a = (long double)x / 1000000;
+			b = (long double)y / 1000000;
+			c = (long double)z / 1000000;
 			printf("%ld", z);
 		}
 		else
