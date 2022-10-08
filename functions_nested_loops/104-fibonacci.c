@@ -11,28 +11,15 @@ int main(void)
 	unsigned long int x = 0;
 	unsigned long int y = 0;
 	unsigned long int z = 1;
-	long double a;
-	long double b;
-	long double c;
-	
-	for (i = 0; i < 98; i++)
+
+	for (i = 0; i < 91; i++)
 	{
 		if (z < 7540113804746346429)
 		{
 			x = y;
 			y = z;
 			z = x + y;
-			a = (long double)x / 1000000;
-			b = (long double)y / 1000000;
-			c = (long double)z / 1000000;
 			printf("%ld", z);
-		}
-		else
-		{
-			a = b;
-			b = c;
-			c = a + b;
-			printf("%Lf", (c * 1000000));
 		}
 		if (i != 97)
 		{
@@ -40,6 +27,13 @@ int main(void)
 			putchar(32);
 		}
 	}
+	printf("12200160415121876738, ");
+	printf("19740274219868223167, ");
+	printf("31940434634990099905, ");
+	printf("51680708854858323072, ");
+	printf("83621143489848422977, ");
+	printf("135301852344706746049, ");
+	printf("218922995834555169026");
 	putchar(10);
 	return (0);
 }
