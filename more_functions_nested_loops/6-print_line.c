@@ -2,6 +2,7 @@
 
 /**
  * print_line - Prints a straight line of n length
+ * @n: number of underscores to print
  *
  * Return: voidi
  */
