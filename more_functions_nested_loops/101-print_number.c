@@ -18,13 +18,21 @@ void print_number(int n)
 		_putchar('-');
 	if (n == 0)
 		_putchar(48);
-	for (d = n; d != 0; count++)
+	d = n;
+	while (d != 0)
+	{
 		d = d / 10;
+		count++;
+	}
 	for (y = 0; y < (count - 1); y ++)
 		e*= 10;
 	for (z = 0; z < count; z++)
 	{
-		_putchar((n / e) + 48);
-		e /= 10;
+		if (n < 0)
+			_putchar(((n * -1) / e) + 48);
+		else
+			_putchar((n / e) + 48);
+		n = n % e;
+		e = e / 10;
 	}
 }
