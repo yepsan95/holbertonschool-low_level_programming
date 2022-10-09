@@ -20,7 +20,8 @@ int main(void)
 			printf("FizzBuzz");
 		else
 			printf("%d", n);
-		putchar(32);
+		if (n < 100)
+			putchar(32);
 	}
 	putchar(10);
 	return (0);
