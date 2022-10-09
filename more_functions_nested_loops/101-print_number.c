@@ -30,7 +30,6 @@ void print_number(int n)
 		if (n < 0)
 			_putchar(((n / e) * -1) + 48);
 		else
-			a = ((n / e) + 48);
 			_putchar((n / e) + 48);
 		n = n % e;
 		e = e / 10;
