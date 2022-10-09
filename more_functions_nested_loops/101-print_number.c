@@ -8,8 +8,6 @@
  */
 void print_number(int n)
 {
-	int rem;
-	int rev = 0;
 	int d = n;
 	int x;
 	int y;
