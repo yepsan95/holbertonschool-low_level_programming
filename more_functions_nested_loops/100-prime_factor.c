@@ -7,11 +7,11 @@
  */
 int main(void)
 {
-	int n = 1231952;
-	int i;
-	int x;
-	int f;
-	int fp;
+	long int n = 612852475143;
+	long int i;
+	long int x;
+	long int f;
+	long int fp;
 	int fc;
 
 	for (i = 1; i <= n; i++)
@@ -27,6 +27,6 @@ int main(void)
 				fp = f;
 		}
 	}
-	printf("%d\n", fp);
+	printf("%ld\n", fp);
 	return (0);
 }
