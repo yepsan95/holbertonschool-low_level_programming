@@ -8,23 +8,28 @@
 int main(void)
 {
 	long int n = 612852475143;
-	long int i;
+	long int m = n;
+	long int i = 2;
 	long int x;
-	long int f;
+	long int p;
 	long int fp;
-	int fc;
 
-	for (i = 1; i <= n; i++)
+	while (i < m)
 	{
-		if ((n % (n / i)) == 0)
-			f = i;
-		fc = 0;
-		for (x = 2; x <= f; x++)
+		p = 0;
+		for (x = 1; x < i; x++)
 		{
-			if ((f % x) == 0)
-				fc++;
-			if (fc == 0)
-				fp = f;
+			if ((i % x) == 0)
+				p++;
+		}
+		if (p == 1 && (n % i) == 0)
+		{
+			fp = i;
+			n = n / i;
+		}
+		else
+		{
+			i++;
 		}
 	}
 	printf("%ld\n", fp);
