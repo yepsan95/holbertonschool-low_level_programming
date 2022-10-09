@@ -12,7 +12,7 @@ void print_number(int n)
 	int y;
 	int z;
 	int e = 1;
-	int count;
+	int count = 0;
 
 	if (n < 0)
 		_putchar('-');
@@ -34,4 +34,5 @@ void print_number(int n)
 		n = n % e;
 		e = e / 10;
 	}
+	_putchar(10);
 }
