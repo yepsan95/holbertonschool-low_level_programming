@@ -28,7 +28,7 @@ void print_number(int n)
 		else
 		_putchar((rev % 10) + 48);
 		rev /= 10;
-		if ((n % 10) == 0)
+		if (n > 9 && (n % 10) == 0)
 			_putchar(48);
 	}
 }
