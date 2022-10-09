@@ -11,6 +11,11 @@ void print_number(int n)
 	int rem;
 	int rev = 0;
 	int d = n;
+	int x;
+	int y;
+	int z;
+	int e = 1;
+	int count;
 
 	if (n < 0)
 		_putchar('-');
@@ -18,18 +23,17 @@ void print_number(int n)
 		_putchar(48);
 	while (d != 0)
 	{
-		rem = d % 10;
-		rev = rev * 10 + rem;
-		d /= 10;
+		d = d / 10;
+		count++;
 	}
-	while (rev != 0)
+	for (x = 0; x <= count; x++)
 	{
-		if (rev < 0)
-			_putchar(((rev % 10) * -1) + 48);
-		else
-		_putchar((rev % 10) + 48);
-		rev /= 10;
-		if (n > 9 && (n % 10) == 0)
-			_putchar(48);
+		for (y = 0; y < (count - 1); y++)
+			e *= 10;
+		for (z = 0; z < count; z++)
+		{
+			_putchar((n / e) + 48);
+			e /= 10;
+		}
 	}
 }
