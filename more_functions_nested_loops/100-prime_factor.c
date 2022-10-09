@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 /**
  * main - C primary function
@@ -8,30 +9,24 @@
 int main(void)
 {
 	long int n = 612852475143;
-	long int m = n;
-	long int i = 2;
-	long int x;
-	long int p;
+	long int i;
 	long int fp;
 
-	while (i < m)
+	while ((n % 2) == 0)
 	{
-		p = 0;
-		for (x = 1; x < i; x++)
-		{
-			if ((i % x) == 0)
-				p++;
-		}
-		if (p == 1 && (n % i) == 0)
+		fp = 2;
+		n = n / 2;
+	}
+	for (i = 3; i <= sqrt(n); i = i + 2)
+	{
+		while (n % i == 0)
 		{
 			fp = i;
 			n = n / i;
 		}
-		else
-		{
-			i++;
-		}
 	}
+	if (n > 2)
+		fp = n;
 	printf("%ld\n", fp);
 	return (0);
 }
