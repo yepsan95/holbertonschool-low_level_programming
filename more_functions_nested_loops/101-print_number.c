@@ -21,6 +21,9 @@ void print_number(int n)
 	}
 	while (rev != 0)
 	{
+		if (rev < 0)
+			_putchar(((rev % 10) * -1) + 48);
+		else
 		_putchar((rev % 10) + 48);
 		rev /= 10;
 	}
