@@ -10,16 +10,17 @@ void print_number(int n)
 {
 	int rem;
 	int rev = 0;
+	int d = n
 
 	if (n < 0)
 		_putchar('-');
 	if (n == 0)
 		_putchar(48);
-	while (n != 0)
+	while (d != 0)
 	{
-		rem = n % 10;
+		rem = d % 10;
 		rev = rev * 10 + rem;
-		n /= 10;
+		d /= 10;
 	}
 	while (rev != 0)
 	{
