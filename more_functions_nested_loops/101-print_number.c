@@ -9,7 +9,6 @@
 void print_number(int n)
 {
 	int d;
-	int x;
 	int y;
 	int z;
 	int e = 1;
@@ -22,7 +21,7 @@ void print_number(int n)
 	for (d = n; d != 0; count++)
 		d = d / 10;
 	for (y = 0; y < (count - 1); y ++)
-		e*= 10
+		e*= 10;
 	for (z = 0; z < count; z++)
 	{
 		_putchar((n / e) + 48);
