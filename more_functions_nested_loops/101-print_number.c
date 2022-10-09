@@ -28,8 +28,9 @@ void print_number(int n)
 	for (z = 0; z < count; z++)
 	{
 		if (n < 0)
-			_putchar(((n * -1) / e) + 48);
+			_putchar(((n / e) * -1) + 48);
 		else
+			a = ((n / e) + 48);
 			_putchar((n / e) + 48);
 		n = n % e;
 		e = e / 10;
