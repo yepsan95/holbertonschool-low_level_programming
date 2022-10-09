@@ -20,6 +20,8 @@ void print_number(int n)
 		n/= 10;
 	}
 	while (rev != 0)
+	{
 		_putchar((rev % 10) + 48);
 		rev /= 10;
+	}
 }
