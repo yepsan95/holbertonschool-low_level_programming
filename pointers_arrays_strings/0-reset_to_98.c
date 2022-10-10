@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - updates the value of a pinted variable to 98
- * @*n: pointer
+ * @n:int variable
  *
  * Return: 0
  */
