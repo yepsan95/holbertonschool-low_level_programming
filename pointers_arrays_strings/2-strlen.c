@@ -8,7 +8,14 @@
  */
 int _strlen(char *s)
 {
-	int i = sizeof(*s);
-	return (i);
+	int i = *s;
+	int count = 0;
+
+	while (i != 0)
+	{
+		i = *s++;
+		count++;
+	}
+	return(count)
 }
 
