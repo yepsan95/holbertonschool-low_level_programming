@@ -16,11 +16,14 @@ void print_rev(char *s)
 		i = *s++;
 		count++;
 	}
-	while (count != -1)
+	if (count != 0)
 	{
-		i = *s-- ;
-		_putchar(i);
-		count--;
+		while (count >= 0)
+		{
+			i = *s-- ;
+			_putchar(i);
+			count--;
+		}
 	}
 	_putchar(10);
 }
