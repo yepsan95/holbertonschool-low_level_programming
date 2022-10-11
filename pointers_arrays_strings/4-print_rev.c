@@ -16,10 +16,10 @@ void print_rev(char *s)
 		i = *s++;
 		count++;
 	}
-	while (count != 0)
+	while (count != -1)
 	{
 		_putchar(i);
-		i = *s--;
+		i = *s-- ;
 		count--;
 	}
 	_putchar(10);
