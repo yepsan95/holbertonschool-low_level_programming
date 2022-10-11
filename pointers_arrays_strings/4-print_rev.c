@@ -18,8 +18,8 @@ void print_rev(char *s)
 	}
 	while (count != -1)
 	{
-		_putchar(i);
 		i = *s-- ;
+		_putchar(i);
 		count--;
 	}
 	_putchar(10);
