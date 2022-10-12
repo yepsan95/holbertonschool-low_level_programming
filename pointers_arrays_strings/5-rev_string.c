@@ -6,9 +6,8 @@
  *
  * Return: void
  */
-void rev_string (char *s)
+void rev_string(char *s)
 {
-
 	int len;
 	int mitad;
 	char temp;
@@ -22,7 +21,7 @@ void rev_string (char *s)
 	{
 		temp = s[i];
 		s[i] = s[len - 1 - i];
-		s[len -1 -i] = temp;
+		s[len - 1 - i] = temp;
 	}
 }
 
