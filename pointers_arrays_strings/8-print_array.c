@@ -16,8 +16,10 @@ void print_array(int *a, int n)
 	while (*(a + size) != '\0')
 		size++;
 	for (i = 0; i < n; i++)
+	{
 		_putchar(a[i]);
 		_putchar(',');
 		_putchar(32);
+	}
 }
 
