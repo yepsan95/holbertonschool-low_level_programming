@@ -10,11 +10,10 @@
 void print_array(int *a, int n)
 {
 	int size;
-	int half;
 	int i;
 
 	size = 0;
-	while (*(str + size) != '\0')
+	while (*(a + size) != '\0')
 		size++;
 	for (i = 0; i < n; i++)
 		_putchar(a[i]);
