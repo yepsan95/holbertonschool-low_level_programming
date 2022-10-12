@@ -18,10 +18,10 @@ void print_rev(char *s)
 	}
 	if (count != 0)
 	{
-		i = *s - 2;
+		count--;
 		while (count >= 0)
 		{
-			i = *s;
+			i = *s--;
 			_putchar(i);
 			count--;
 		}
