@@ -13,7 +13,7 @@ int _atoi(char *s)
 	int num;
 
 	size = 0;
-	while (*(src + size) != '\0')
+	while (*(s + size) != '\0')
 		size++;
 	i = size;
 	while (s[i] <= 48 && s[i] >= 57)
