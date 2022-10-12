@@ -22,5 +22,6 @@ int _atoi(char *s)
 		num = num + s[i] * pow(10, (size - i));
 		i--;
 	}
+	return (0);
 }
 
