@@ -32,7 +32,7 @@ int _atoi(char *s)
 	if (primer_num != -1)
 	{
 		for (i = primer_num; s[i] >= '0' && s[i] <= '9'; i++)
-				ult_num = i;
+			ult_num = i;
 		for (i = primer_num; i <= ult_num; i++)
 		{
 			if (minus % 2 == 0)
