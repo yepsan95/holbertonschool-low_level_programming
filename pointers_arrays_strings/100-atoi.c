@@ -46,7 +46,7 @@ int _atoi(char *s)
 	while (i <= ult_num)
 	{
 		num = num + (s[i] - 48);
-		if (i < ult_num)
+		if (i < ult_num ||  s[i] == 48)
 			num = (num * 10);
 		i++;
 	}
