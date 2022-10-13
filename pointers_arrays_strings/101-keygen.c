@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
 /**
@@ -6,7 +6,7 @@
  *
  * Return: 0
  */
-char main(void)
+int main(void)
 {
 	int i = 0;
 	int randomizer;
