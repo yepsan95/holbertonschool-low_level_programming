@@ -50,5 +50,8 @@ int _atoi(char *s)
 			num = (num * 10);
 		i++;
 	}
-	return (num);
+	if (num != 0)
+		return (num);
+	else 
+		return (0);
 }
