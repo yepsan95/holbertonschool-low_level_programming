@@ -15,7 +15,7 @@ char *_strncat(char *dest, char *src, int n)
 
 	while (*(dest + i) != '\0')
 		i++;
-	while (*(src + x) != '\0' && x <= n && n != 0)
+	while (*(src + x) != '\0' && x < n && n != 0)
 	{
 		dest[i + x] = src[x];
 		x++;
