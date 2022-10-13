@@ -29,7 +29,7 @@ int _atoi(char *s)
 		}
 		else
 		{
-			primer_num = -1
+			primer_num = -1;
 		}
 	}
 	if (primer_num != -1)
