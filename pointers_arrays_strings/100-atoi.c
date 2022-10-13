@@ -27,23 +27,32 @@ int _atoi(char *s)
 			primer_num = i;
 			break;
 		}
-	}
-	for (i = primer_num; i <= size; i++)
-	{
-		if (!(s[i] >= '0' && s[i] <= '9'))
+		else
 		{
-			ult_num = i - 1;
-			break;
+			primer_num = -1
 		}
 	}
-	for (i = primer_num; i <= ult_num; i++)
+	if (primer_num != -1)
 	{
-		if (minus % 2 == 0)
-			num = num + (s[i] - 48);
-		else
-			num = num - (s[i] - 48);
-		if (i < ult_num)
-			num = (num * 10);
+		for (i = primer_num; i <= size; i++)
+		{
+			if (!(s[i] >= '0' && s[i] <= '9'))
+			{
+				ult_num = i - 1;
+				break;
+			}
+		}
+		for (i = primer_num; i <= ult_num; i++)
+		{
+			if (minus % 2 == 0)
+				num = num + (s[i] - 48);
+			else
+				num = num - (s[i] - 48);
+			if (i < ult_num)
+				num = (num * 10);
+		}
 	}
+	else
+		num = 0;
 	return (num);
 }
