@@ -44,6 +44,5 @@ int _atoi(char *s)
 	}
 	if (minus % 2 != 0)
 		num = num * -1;
-	if (num != 0)
-		return (num);
+	return (num);
 }
