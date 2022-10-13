@@ -14,9 +14,10 @@ int main(void)
 	char letter[] = "abcdefghijklmnopqrstuvwxyz";
 	char LETTER[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char symbols[] = "!@#$^&*?";
+	char password[10];
 
 	randomizer = rand() % 4;
-	for(i = 0; i < N; i++)
+	for(i = 0; i < 10; i++)
 	{
 		if (randomizer == 2)
 		{
