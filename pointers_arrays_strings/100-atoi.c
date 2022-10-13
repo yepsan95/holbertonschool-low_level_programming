@@ -40,6 +40,8 @@ int _atoi(char *s)
 			break;
 		}
 	}
+	if (primer_num == 0)
+		ult_num = 0;
 	i = primer_num;
 	while (i <= ult_num)
 	{
