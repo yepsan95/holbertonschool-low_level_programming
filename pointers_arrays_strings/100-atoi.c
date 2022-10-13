@@ -52,6 +52,6 @@ int _atoi(char *s)
 	}
 	if (num != 0)
 		return (num);
-	else 
+	else
 		return (0);
 }
