@@ -34,7 +34,7 @@ int _atoi(char *s)
 	}
 	for (i = primer_num; i; i++)
 	{
-		if (!(s[i] >= '0' && i <= '9'))
+		if (!(s[i] >= '0' && s[i] <= '9'))
 		{
 			ult_num = i - 1;
 			break;
@@ -43,7 +43,7 @@ int _atoi(char *s)
 	i = primer_num;
 	while (i <= ult_num)
 	{
-		num = num + s[i];		;
+		num = num + (s[i] - 48);
 		if (i < ult_num)
 			num = (num * 10);
 		i++;
