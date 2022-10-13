@@ -6,14 +6,11 @@
  *
  * Return: 0
  */
-int main(void)
+char main(void)
 {
 	int i = 0;
 	int randomizer;
 	char numbers[] = "0123456789";
-	char letter[] = "abcdefghijklmnopqrstuvwxyz";
-	char LETTER[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char symbols[] = "!@#$^&*?";
 	char password[10];
 
 	randomizer = rand() % 4;
@@ -25,5 +22,5 @@ int main(void)
 			randomizer = rand() % 4;
 		}
 	}
-	return (password);
+		return (*password);
 }
