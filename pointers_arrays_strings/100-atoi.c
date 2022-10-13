@@ -38,11 +38,12 @@ int _atoi(char *s)
 	}
 	for (i = primer_num; i <= ult_num; i++)
 	{
-		num = num + (s[i] - 48);
+		if (minus % 2 == 0)
+			num = num + (s[i] - 48);
+		else
+			num = num - (s[i] - 48);
 		if (i < ult_num)
 			num = (num * 10);
 	}
-	if (minus % 2 != 0)
-		num = num * -1;
 	return (num);
 }
