@@ -13,17 +13,13 @@ int _atoi(char *s)
 	int i;
 	int num = 0;
 	int minus = 0;
-	int sum = 0;
 	int primer_num;
 	int ult_num;
 
-	size = 0;
-	while (*(s + size) != '\0')
+	for (size = 0; *(s + size) != '\0';)
 		size++;
 	for (i = 0; i <= size; i++)
 	{
-		if (s[i] == '+')
-			sum++;
 		if (s[i] == '-')
 			minus++;
 		if (s[i] >= '0' && s[i] <= '9')
@@ -32,7 +28,7 @@ int _atoi(char *s)
 			break;
 		}
 	}
-	for (i = primer_num; i; i++)
+	for (i = primer_num; i <= size; i++)
 	{
 		if (!(s[i] >= '0' && s[i] <= '9'))
 		{
@@ -40,20 +36,14 @@ int _atoi(char *s)
 			break;
 		}
 	}
-	if (primer_num == 0)
-		ult_num = 0;
-	i = primer_num;
-	while (i <= ult_num)
+	for (i = primer_num; i <= ult_num; i++)
 	{
 		num = num + (s[i] - 48);
-		if (i < ult_num ||  s[i] == 48)
+		if (i < ult_num)
 			num = (num * 10);
-		i++;
 	}
 	if (minus % 2 != 0)
 		num = num * -1;
 	if (num != 0)
 		return (num);
-	else
-		return (0);
 }
