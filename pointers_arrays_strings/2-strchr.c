@@ -11,16 +11,18 @@ i* @s: pointer to string
 char *_strchr(char *s, char c)
 {
 	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
+	int size = 0;
+	for (i = 0; s[i] != '\0', i++)
+		size++
+	for (i = 0; i <= size; i++)
 	{
 		if (s[i] == c)
 		{
+			p = (s + i);
 			break;
 		}
+		else
+			p = NULL;
 	}
-	if (s[i] != '\0')
-		return (s + i);
-	else
-		return (NULL);
+	return (p);
 }
