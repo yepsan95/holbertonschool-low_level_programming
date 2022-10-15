@@ -23,4 +23,5 @@ char *leet(char *a)
 		else if (a[i] == 'l' || a[i] == 'L')
 			a[i] = '1';
 	}
+	return (a);
 }
