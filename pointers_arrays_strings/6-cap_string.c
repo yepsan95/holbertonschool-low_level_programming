@@ -10,7 +10,7 @@ char *cap_string(char *a)
 {
 	int i;
 	int j;
-	char sep[] = " \t\n,;.!?\"(){}"
+	char sep[] = " \t\n,;.!?\"(){}";
 
 	for (i = 0; a[i] != '\0'; i++)
 	{
