@@ -11,12 +11,14 @@ i* @dest: destiny string
 char *_strncpy(char *dest, char *src, int n)
 {
 	int i = 0;
+	int size = 0;
 
-	for (i = 0; i < n; i++)
-	{
-		dest[i] = src[i];
-		if (src[i] == '\0')
-			break;
-	}
+	for (i = 0; *(src + i) != '\0'; i++)
+		size++;
+	for (i = 0; i < size; i++)
+		*(dest + i) = *(src + i);
+	if (size < (n + 1))
+		for (; i < n; i++)
+			*(dest + i) = '\0'
 	return (dest);
 }
