@@ -8,7 +8,7 @@ i* @a: string
  */
 char *leet(char *a)
 {
-	int i ;
+	int i;
 	int j;
 	char letters[] = "aAeEoOtTlL";
 	char numbers[] = "43071";
