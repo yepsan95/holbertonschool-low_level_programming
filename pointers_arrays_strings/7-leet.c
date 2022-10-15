@@ -11,13 +11,13 @@ char *leet(char *a)
 	int i ;
 	int j;
 	char letters[] = "aAeEoOtTlL";
-	char numbers[] = "43071"
+	char numbers[] = "43071";
 
 	for (i = 0; a[i] != '\0'; i++)
 	{
 		for (j = 0; j < 5; j++)
 		{
-			if (a[i] = letters[j])
+			if (a[i] == letters[j])
 				a[i] = numbers[j / 2];
 		}
 
