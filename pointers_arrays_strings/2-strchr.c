@@ -10,7 +10,6 @@ i* @s: pointer to string
 char *_strchr(char *s, char c)
 {
 	int i;
-	int p;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
