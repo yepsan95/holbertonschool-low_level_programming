@@ -23,8 +23,8 @@ int _strcmp(char *s1, char *s2)
 		if (i >= size1 || i >= size2)
 			break;
 	}
-	if ((s1[i] > s2[i] || s1[i] < s2[i]) && *(s1) != '\0')
-		r = (s2[i] - s1[i]);
+	if ((s1[i] > s2[i] || s1[i] < s2[i])
+		r = (s1[i] - s2[i]);
 	else
 		r = 0;
 	return (r);
