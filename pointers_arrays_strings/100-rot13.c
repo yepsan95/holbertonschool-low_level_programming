@@ -14,7 +14,7 @@ char *rot13(char *a)
 
 	for (i = 0; a[i] != '\0'; i++)
 	{
-		for (j = 0; j < 51; j++)
+		for (j = 0; j < 52; j++)
 		{
 			if (a[i] == lower[j])
 				a[i] = lower[51 - j];
