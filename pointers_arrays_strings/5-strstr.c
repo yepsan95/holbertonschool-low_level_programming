@@ -13,22 +13,21 @@ char *_strstr(char *haystack, char *needle)
 	int i;
 	int j;
 	int subsize = 0;
-	int coincidences = 0;
 	char *p = 0;
 
 	for (i = 0; needle[i] != '\0'; i++)
 		subsize++;
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
-
+		coincidences = 0;
 		for (j = 0; needle[j] != '\0'; j++)
-		{
+		{	
 			if (haystack[i + j] == needle[j])
 				coincidences++;
 			else
 				break;
 		}
-		if (coincidences == (subsize - 1))
+		if (coincidences == subsize)
 		{
 			p = (haystack + i);
 			break;
