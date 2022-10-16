@@ -14,13 +14,11 @@ void print_diagsums(int *a, int size)
 	int i;
 	int sum_diag1 = 0;
 	int sum_diag2 = 0;
-	int diagsums;
 
 	for (i = 0; i < size; i++)
 	{
 		sum_diag1 = sum_diag1 + *(a + (i * size + i) * size);
 		sum_diag2 = sum_diag2 + *(a + (i * size + (size - 1 - i)) * size);
 	}
-	diagsums = sum_diag1 + sum_diag2;
-	printf("%d\n", diagsums);
+	printf("%d, %d\n", sum_diag1, sum_diag2);
 }
