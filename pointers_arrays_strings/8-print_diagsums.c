@@ -18,8 +18,8 @@ void print_diagsums(int *a, int size)
 
 	for (i = 0; i < size; i++)
 	{
-		sum_diag1 = sum_diag1 + a[i][i];
-		sum_diag2 = sum_diag2 + a[i][size - 1 - i];
+		sum_diag1 = sum_diag1 + (a[i])[i];
+		sum_diag2 = sum_diag2 + (a[i])[size - 1 - i];
 	}
 	diagsums = sum_diag1 + sum_diag2;
 	printf("%d\n", diagsums);
