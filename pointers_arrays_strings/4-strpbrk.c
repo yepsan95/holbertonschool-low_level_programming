@@ -8,7 +8,7 @@ i* @s: pointer to a string
  *
  * Return: char *
  */
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
 	int i;
 	int j;
@@ -19,8 +19,10 @@ unsigned int _strspn(char *s, char *accept)
 		for (j = 0; accept[j] != '\0'; j++)
 		{
 			if (s[i] == accept[j])
+			{
 				p = *(s + i);
 				break;
+			}
 		}
 	}
 	if (p != 0)
