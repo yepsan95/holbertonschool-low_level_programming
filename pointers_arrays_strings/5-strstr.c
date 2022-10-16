@@ -12,6 +12,7 @@ char *_strstr(char *haystack, char *needle)
 {
 	int i;
 	int j;
+	int coincidences;
 	int subsize = 0;
 	char *p = 0;
 
