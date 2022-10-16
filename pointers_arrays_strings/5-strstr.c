@@ -28,7 +28,7 @@ char *_strstr(char *haystack, char *needle)
 			else
 				break;
 		}
-		if (coincidences == (subsize))
+		if (coincidences == (subsize - 1))
 		{
 			p = (haystack + i);
 			break;
