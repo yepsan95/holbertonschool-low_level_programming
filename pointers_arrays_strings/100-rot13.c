@@ -9,7 +9,7 @@
 char *rot13(char *a)
 {
 	int temp = 0;
-	char lower[26] = "abcdefghijklmnopqrstuvwxyz"
+	char lower[26] = "abcdefghijklmnopqrstuvwxyz";
 	int i;
 	int j;
 
