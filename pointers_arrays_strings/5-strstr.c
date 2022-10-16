@@ -14,6 +14,7 @@ char *_strstr(char *haystack, char *needle)
 	int j;
 	int subsize = 0;
 	int coincidences = 0;
+	char *p = 0;
 
 	for (i = 0; needle[i] != '\0'; i++)
 		subsize++;
@@ -28,8 +29,11 @@ char *_strstr(char *haystack, char *needle)
 				break;
 		}
 		if (coincidences == (subsize - 1))
-			return (haystack + i);
+		{
+			p = (haystack + i);
+			return (p);
+		}
 	}
-	if (coincidences < (subsize - 1))
+	if (p == 0)
 		return (NULL);
 }
