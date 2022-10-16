@@ -8,16 +8,16 @@
  */
 char *rot13(char *a)
 {
-	char lower[26] = "abcdefghijklmnopqrstuvwxyz";
+	char lower[52] = "AaBbBcDdEeFfGgHhIiJjKkLlMmnNoOpPqQrRsStTuUvVwWxXyYzZ";
 	int i;
 	int j;
 
 	for (i = 0; a[i] != '\0'; i++)
 	{
-		for (j = 0; j < 26; j++)
+		for (j = 0; j < 51; j++)
 		{
 			if (a[i] == lower[j])
-				a[i] = lower[25 - j];
+				a[i] = lower[51 - j];
 		}
 	}
 	return (a);
