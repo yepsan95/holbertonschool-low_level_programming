@@ -8,7 +8,7 @@
  */
 char *rot13(char *a)
 {
-	char lower[52] = "AaBbBcDdEeFfGgHhIiJjKkLlMmnNoOpPqQrRsStTuUvVwWxXyYzZ";
+	char lower[52] = "AaBbCcDdEeFfGgHhIiJjKkLlMmnNoOpPqQrRsStTuUvVwWxXyYzZ";
 	int i;
 	int j;
 
