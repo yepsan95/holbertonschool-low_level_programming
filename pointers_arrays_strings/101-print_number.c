@@ -22,7 +22,7 @@ void print_number(int n)
 	}
 	for (i = 0; i < size; i++)
 	{
-		pow = 1
+		pow = 1;
 		for (j = 0; j < (size - 1 - i); j++)
 			pow = pow * 10;
 		digit = (n / pow) % 10;
