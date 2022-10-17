@@ -9,6 +9,7 @@
 void print_number(int n)
 {
 	int i;
+	int j;
 	int pow;
 	int digit;
 	int size = 0;
