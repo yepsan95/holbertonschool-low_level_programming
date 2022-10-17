@@ -26,6 +26,8 @@ void print_number(int n)
 		for (j = 0; j < (size - 1 - i); j++)
 			pow = pow * 10;
 		digit = (n / pow) % 10;
+		if (digit < 0)
+			digit = digit * -1;
 		_putchar(digit + 48);
 	}
 }
