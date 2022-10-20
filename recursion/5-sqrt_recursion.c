@@ -15,6 +15,13 @@ int _sqrt_recursion(int n)
 	return (sqrt_fb(n, 2));
 }
 
+/**
+ * sqrt_fb - counter for trial and error
+ * @n: number
+ * @contador: trial and error number
+ *
+ * Return: square root
+ */
 int sqrt_fb(int n, int contador)
 {
 	if (contador * contador < n)
