@@ -10,7 +10,7 @@ int is_prime_number(int n)
 {
 	if (n <= 1)
 		return (0);
-	return (is_prime(2, r));
+	return (is_prime(2, n));
 }
 /**
  * is_prime - Counts the multiples of a number
