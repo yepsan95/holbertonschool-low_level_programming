@@ -19,6 +19,8 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	x = atoi(argv[1]);
+	if (x < 0)
+		printf("0\n")
 	while (x)
 	{
 		y++;
