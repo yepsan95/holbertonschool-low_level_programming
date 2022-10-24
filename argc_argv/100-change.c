@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	x = atoi(argv[1]);
 	if (x < 0)
 		printf("0\n");
-	while (x)
+	while (x > 0)
 	{
 		y++;
 		if ((x - 25) >= 0)
