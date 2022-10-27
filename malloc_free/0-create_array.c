@@ -20,5 +20,5 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	*puntero = c;
 	free(puntero);
-	return(puntero);
+	return (puntero);
 }
