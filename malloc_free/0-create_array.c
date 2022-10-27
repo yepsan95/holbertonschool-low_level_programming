@@ -21,6 +21,6 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 	free(puntero);
-	*puntero = c;
+	puntero[0] = c;
 	return (puntero);
 }
