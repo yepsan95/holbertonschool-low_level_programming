@@ -3,7 +3,6 @@
 #include <stdlib.h>
 
 /**
- *
  * create_array - creates an array of chars and initializes with character 'c'
  *
  * @size: size of the array
@@ -16,7 +15,7 @@ char *create_array(unsigned int size, char c)
 	char *puntero;
 
 	puntero = malloc(size * sizeof(char));
-	if (puntero == NULL)
+	if (puntero == NULL || size = 0)
 		return (NULL);
 	*puntero = c;
 	free(puntero);
