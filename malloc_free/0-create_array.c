@@ -14,7 +14,6 @@
 char *create_array(unsigned int size, char c)
 {
 	char *puntero;
-	int i;
 
 	puntero = malloc(size * sizeof(char));
 	if (puntero == NULL)
