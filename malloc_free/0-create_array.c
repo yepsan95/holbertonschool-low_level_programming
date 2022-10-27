@@ -20,7 +20,7 @@ char *create_array(unsigned int size, char c)
 		free(puntero);
 		return (NULL);
 	}
-	puntero[0] = c;
 	free(puntero);
+	*puntero = c;
 	return (puntero);
 }
