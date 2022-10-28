@@ -22,9 +22,15 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; s2[i] != '\0'; i++)
 	s2_size = i;
 	rtn = malloc(sizeof(char) * (s1_size + s2_size + 1));
+	if (rtn = NULL)
+	{
+		free(rtn);
+		return (NULL);
+	}
 	for (i = 0; i < s1_size; i++)
 		*(rtn + i) = s1[i];
 	for (i = 0; i <= s2_size; i++)
 		*(rtn + s1_size + i) = s2[i];
+	free(rtn);
 	return (rtn);
 }
