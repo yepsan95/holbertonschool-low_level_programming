@@ -21,6 +21,6 @@ char *_strdup(char *str)
 	if (puntero == NULL || str == NULL)
 		return (NULL);
 	for (i = 0; i <= str_size; i++)
-		*(puntero + i) = str[i];
+		*(puntero + i) = *(str + i);
 	return (puntero);
 }
