@@ -15,7 +15,7 @@ char *_strdup(char *str)
 	int i;
 	int str_size;
 
-	for (i = 0; str[i] == '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	str_size = i;
 	puntero = (char *)malloc(str_size * sizeof(char));
 	if (puntero == NULL || str == NULL)
