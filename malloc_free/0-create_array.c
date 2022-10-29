@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
  * create_array - creates an array of chars and initializes with character 'c'
@@ -20,7 +18,7 @@ char *create_array(unsigned int size, char c)
 		free(puntero);
 		return (NULL);
 	}
+	*(puntero) = c;
 	free(puntero);
-	*puntero = c;
 	return (puntero);
 }
