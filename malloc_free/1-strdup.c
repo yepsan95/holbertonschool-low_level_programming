@@ -20,7 +20,7 @@ char *_strdup(char *str)
 	puntero = (char *)malloc(str_size * sizeof(char));
 	if (puntero == NULL || str == NULL)
 		return (NULL);
-	for (i = 0; i < str_size; i++)
+	for (i = 0; i <= str_size; i++)
 		*(puntero + i) = str[i];
 	return (puntero);
 }
