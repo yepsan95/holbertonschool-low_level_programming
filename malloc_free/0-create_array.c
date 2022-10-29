@@ -17,6 +17,7 @@ char *create_array(unsigned int size, char c)
 	puntero = (char *)malloc(size * sizeof(char));
 	if (puntero == NULL || size == 0)
 	{
+		free(puntero);
 		return (NULL);
 	}
 	*(puntero) = c;
