@@ -12,9 +12,9 @@
  */
 char *create_array(unsigned int size, char c)
 {
-	void *puntero;
+	char *puntero;
 
-	puntero = malloc(size * sizeof(char));
+	puntero = (char *)malloc(size * sizeof(char));
 	if (puntero == NULL || size == 0)
 	{
 		return (NULL);
