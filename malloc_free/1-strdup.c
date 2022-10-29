@@ -20,11 +20,11 @@ char *_strdup(char *str)
 	for (i = 0; str[i] != '\0'; i++)
 	str_size = i;
 	if (str_size == 0)
-		return (NULL);
+		return (str);
 	puntero = (char *)malloc(str_size * sizeof(char));
 	if (puntero == NULL)
 		return (NULL);
-	for (i = 0; i < str_size; i++)
+	for (i = 0; i <= str_size; i++)
 		*(puntero + i) = *(str + i);
 	return (puntero);
 }
