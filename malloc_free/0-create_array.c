@@ -13,6 +13,7 @@
 char *create_array(unsigned int size, char c)
 {
 	char *puntero;
+	int i;
 
 	puntero = (char *)malloc(size * sizeof(char));
 	if (puntero == NULL || size == 0)
@@ -20,6 +21,7 @@ char *create_array(unsigned int size, char c)
 		free(puntero);
 		return (NULL);
 	}
-	*(puntero) = c;
+	for (i = 0; i <= size; i++)
+		*(puntero + i) = c;
 	return (puntero);
 }
