@@ -32,10 +32,13 @@ int **alloc_grid(int width, int height)
 			return (NULL);
 		}
 	}
-	if (rtn[i] == NULL)
+	for (i = 0; i < height; i++)
 	{
-		free(rtn[i]);
-		return (NULL);
+		if (rtn[i] == NULL)
+		{
+			free(rtn[i]);
+			return (NULL);
+		}
 	}
 	return (rtn);
 }
