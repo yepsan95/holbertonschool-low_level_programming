@@ -23,13 +23,19 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 	for (i = 0; i < height; i++)
-	{
 		rtn[i] = (int *)calloc(width, sizeof(int));
+	for (i = 0; i < height; i++)
+	{
 		if (rtn[i] == NULL)
 		{
 			free(rtn[i]);
 			return (NULL);
 		}
+	}
+	if (rtn[i] == NULL)
+	{
+		free(rtn[i]);
+		return (NULL);
 	}
 	return (rtn);
 }
