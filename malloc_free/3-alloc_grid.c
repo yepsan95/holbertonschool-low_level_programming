@@ -23,9 +23,8 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 	for (i = 0; i < height; i++)
-		rtn[i] = (int *)calloc(width, sizeof(int));
-	for (i = 0; i < height; i++)
 	{
+		rtn[i] = (int *)calloc(width, sizeof(int));
 		if (rtn[i] == NULL)
 		{
 			free(rtn[i]);
