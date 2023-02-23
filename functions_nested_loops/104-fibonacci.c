@@ -8,8 +8,11 @@
 int main(void)
 {
 	int i;
-	unsigned long int a = 0, b = 1, sum = a + b;
-	unsigned long int a_1, a_2, b_1, b_2, sum_1, sum_2;
+	unsigned long int a, b, sum, a_1, a_2, b_1, b_2, sum_1, sum_2;
+
+	a = 0;
+	b = 1;
+	sum = a + b;
 
 	for (i = 1; i <= 91; i++)
 	{
