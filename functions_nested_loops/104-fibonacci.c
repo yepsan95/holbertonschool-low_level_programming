@@ -27,7 +27,7 @@ int main(void)
 	sum_1 = a_1 + b_1;
 	sum_2 = a_2 + b_2;
 
-	for (i = 92; i <= 97; i++)
+	for (i = 92; i <= 98; i++)
 	{
 		printf(", %ld%ld", sum_1, sum_2);
 		a_1 = b_1;
