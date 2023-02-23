@@ -38,7 +38,7 @@ int main(void)
 		sum_2 = a_2 + b_2;
 		if (sum_2 > 9999999999)
 		{
-			sum_1 = sum_1 + 1;
+			sum_1 = sum_1 + (sum_2 / 10000000000);
 			sum_2 = sum_2 % 10000000000;
 		}
 	}
