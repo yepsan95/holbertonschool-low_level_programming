@@ -9,16 +9,16 @@ i* @s1: string 1
  */
 int _strcmp(char *s1, char *s2)
 {
-	int i;
-	int size1;
-	int size2;
-	int r;
+	int i, size1, size2, r;
 
-	for (i = 0; *(s1 + i) != '\0'; i++)
+	size1 = 0;
+	size2 = 0;
+
+	for (i = 0; s1[i] != '\0'; i++)
 		size1++;
-	for (i = 0; *(s2 + i) != '\0'; i++)
+	for (i = 0; s2[i] != '\0'; i++)
 		size2++;
-	for (i = 0; *(s1 + i) == *(s2 + i); i++)
+	for (i = 0; s1[i] == s2[i]; i++)
 	{
 		if (i >= size1 || i >= size2)
 			break;
