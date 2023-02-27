@@ -8,8 +8,7 @@
  */
 char *rot13(char *a)
 {
-	char set1[27] = "AaBbCcDdEeFfGgHhIiJjKkLlMm";
-	char set2[27] = "NnOoPpQqRrSsTtUuVvWwXxYyZz";
+	char set[] = "AaBbCcDdEeFfGgHhIiJjKkLlMmzZyYxXwWvVuUtTsSrRqQpPoOnN";
 	int i;
 	int j;
 
@@ -17,10 +16,8 @@ char *rot13(char *a)
 	{
 		for (j = 0; j <= 25; j++)
 		{
-			if (a[i] == set1[j] && a[i] != '\0')
-				a[i] = set2[j];
-			else if (a[i] == set2[j] && a[i] != '\0')
-				a[i] = set1[j];
+			if (a[i] == set[j] && a[i] != '\0')
+				a[i] = set[51 - j];
 		}
 	}
 	return (a);
