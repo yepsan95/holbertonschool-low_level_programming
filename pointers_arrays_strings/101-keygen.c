@@ -8,9 +8,8 @@
  *
  * Return: void
  */
-void main(void)
+int main(void)
 {
-	int i;
 	int random;
 	int sum;
 
@@ -24,4 +23,5 @@ void main(void)
 		putchar(random);
 	}
 	putchar(2772 - sum);
+	return (0);
 }
