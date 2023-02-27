@@ -1,26 +1,27 @@
+#include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "main.h"
 
 /**
- * main - C primary function
+ * main - Generates random valid passwords for the program 101-crackme
  *
- * Return: 0
+ * Return: void
  */
-int main(void)
+void main(void)
 {
-	int i = 0;
-	int randomizer;
-	char numbers[] = "0123456789";
-	char password[10];
+	int i;
+	int random;
+	int sum;
 
-	randomizer = rand() % 4;
-	for(i = 0; i < 10; i++)
+	srand(time(NULL));
+
+	sum = 0;
+	while (sum <= 2642)
 	{
-		if (randomizer == 2)
-		{
-			password[i] = numbers[rand() % 10];
-			randomizer = rand() % 4;
-		}
+		random = ((rand() % 80) + 48);
+		sum = sum + random;
+		putchar(random);
 	}
-		return (*password);
+	putchar(2772 - sum);
 }
