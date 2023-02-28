@@ -8,26 +8,34 @@
  */
 void print_number(int n)
 {
-	int i;
-	int j;
-	int pow;
-	int digit;
-	int size = 0;
+	int i, j, size, digit;
 
-	i = n;
-	while (i > 0)
+	if (n == 0)
 	{
-		i = i / 10;
-		size++;
+		_putchar(48);
 	}
-	for (i = 0; i < size; i++)
+	else if (n < 0)
 	{
-		pow = 1;
-		for (j = 0; j < (size - 1 - i); j++)
-			pow = pow * 10;
-		digit = (n / pow) % 10;
-		if (digit < 0)
-			digit = digit * -1;
-		_putchar(digit + 48);
+		_putchar('-');
+		n = n * -1;
+	}
+	if (n > 0)
+	{
+		size = 0;
+		i = n;
+		while (i > 0)
+		{
+			i = i / 10;
+			size++;
+		}
+		for (i = size; i > 0; i--)
+		{
+			digit = n;
+			for (j = i; j > 1; j--)
+			{
+				digit = digit / 10;
+			}
+			_putchar((digit % 10) + 48);
+		}
 	}
 }
