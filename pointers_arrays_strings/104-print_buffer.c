@@ -27,12 +27,17 @@ void print_buffer(char *b, int size)
 		}
 		for (i = n; i < (n + 10); i++)
 		{
-			if (i > size)
+			if (i >= size)
+			{
 				break;
-			if (b[i] >= 32 && b[i] <= 126)
-				printf("%c", b[i]);
+			}
 			else
-				printf(".");
+			{
+				if (b[i] >= 32 && b[i] <= 126)
+					printf("%c", b[i]);
+				else
+					printf(".");
+			}
 		}
 		putchar('\n');
 	}
