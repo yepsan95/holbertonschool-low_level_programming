@@ -30,3 +30,6 @@ void print_diagsums(int *a, int size);
 char *rot13(char *);
 void print_number(int n);
 int power(int base, int power);
+void print_buffer(char *b, int size);
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
+void set_string(char **s, char *to);
