@@ -28,10 +28,7 @@ void print_buffer(char *b, int size)
 		for (i = n; i < (n + 10); i++)
 		{
 			if (i > size)
-			{
-				putchar(32);
 				continue;
-			}
 			else if (b[i] >= 32 && b[i] <= 126)
 				printf("%c", b[i]);
 			else if (b[i] <= 0 && b[i] <= 31)
