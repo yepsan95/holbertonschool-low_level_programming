@@ -29,9 +29,9 @@ void print_buffer(char *b, int size)
 		{
 			if (i > size)
 				break;
-			else if (b[i] >= 32 && b[i] <= 126)
+			if (b[i] >= 32 && b[i] <= 126)
 				printf("%c", b[i]);
-			else if (b[i] <= 0 && b[i] <= 31)
+			else
 				printf(".");
 		}
 		putchar('\n');
