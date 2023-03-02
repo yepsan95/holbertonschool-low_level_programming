@@ -30,7 +30,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 	add1 = 0;
 	r[size_r - 1] = '\0';
-	for (i = 1; i < size_r - 1; i++)
+	for (i = 1; i <= size_r - 1; i++)
 	{
 		if (i <= shortest_len)
 			digit = ((n1[n1_len - i]) - 48) + (n2[(n2_len - i)] - 48) + add1;
