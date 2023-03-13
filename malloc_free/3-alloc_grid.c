@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - returns a pointer to a 2 dimensaional array of integers
+ * alloc_grid - returns a pointer to a 2 dimensional array of integers
  * @width: width of the table
  * @height: height of the table
  *
@@ -17,7 +17,7 @@ int **alloc_grid(int width, int height)
 	if (width == 0 || width < 0 || height == 0 || height < 0)
 		return (NULL);
 	rtn = (int **)calloc(height, sizeof(int *));
-	if (rtn == NULL)
+	if (rtn == NULL || *(rtn) == NULL)
 	{
 		free(rtn);
 		return (NULL);
