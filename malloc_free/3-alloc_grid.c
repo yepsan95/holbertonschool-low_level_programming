@@ -17,7 +17,7 @@ int **alloc_grid(int width, int height)
 	if (width == 0 || width < 0 || height == 0 || height < 0)
 		return (NULL);
 	rtn = (int **)calloc(height, sizeof(int *));
-	if (rtn == NULL || *(rtn) == NULL)
+	if (rtn == NULL)
 	{
 		free(rtn);
 		return (NULL);
