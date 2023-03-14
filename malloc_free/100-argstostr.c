@@ -29,13 +29,13 @@ char *argstostr(int ac, char **av)
 		}
 		arg_len++;
 	}
+	arg_len++;
 	all_args = (char *)malloc(arg_len * sizeof(char));
 	if (all_args == NULL)
 	{
 		free(all_args);
 		return (NULL);
 	}
-
 	arg_index = 0;
 	for (i = 0; i < ac; i++)
 	{
