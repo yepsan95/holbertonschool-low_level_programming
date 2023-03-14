@@ -33,7 +33,6 @@ char *argstostr(int ac, char **av)
 	all_args = (char *)malloc(arg_len * sizeof(char));
 	if (all_args == NULL)
 	{
-		free(all_args);
 		return (NULL);
 	}
 	arg_index = 0;
