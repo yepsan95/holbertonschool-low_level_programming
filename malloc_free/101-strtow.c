@@ -11,7 +11,6 @@
 char **strtow(char *str)
 {
 	char **str_array;
-	char *string;
 	int word_count, word, i, j, k, m = 0;
 
 	for (i = 0; str[i] != '\0'; i++)
