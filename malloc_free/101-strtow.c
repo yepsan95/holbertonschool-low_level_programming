@@ -42,13 +42,14 @@ char **strtow(char *str)
 		str_array[i] = (char *)malloc((word + 1) * sizeof(char));
 		if (str_array[i] == NULL)
 		{
-			for (k = 0; k <= i; k++)
+			for (k = 0; k < i; k++)
 				free(str_array[k]);
 			free(str_array);
 			return (NULL);
 		}
-		for (k = 0; k <= word; k++)
+		for (k = 0; k < word; k++)
 			str_array[i][k] = str[m + k];
+		str_array[i][k] = '\0'
 	}
 	return (str_array);
 }
