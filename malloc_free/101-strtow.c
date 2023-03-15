@@ -49,7 +49,7 @@ char **strtow(char *str)
 		}
 		for (k = 0; k < word; k++)
 			str_array[i][k] = str[m + k];
-		str_array[i][k] = '\0'
+		str_array[i][k] = '\0';
 	}
 	return (str_array);
 }
