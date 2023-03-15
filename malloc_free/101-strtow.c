@@ -34,7 +34,10 @@ char **strtow(char *str)
 			if (str[j] == ' ' && (j == 0 || str[j - 1] == ' '))
 				continue;
 			if (str[j] == ' ' && str[j - 1] != ' ')
+			{
+				j++;
 				break;
+			}
 		}
 		str_array[i] = (char *)malloc((word + 1) * sizeof(char));
 		if (str_array[i] == NULL)
