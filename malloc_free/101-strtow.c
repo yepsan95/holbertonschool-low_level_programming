@@ -11,34 +11,16 @@
 char **strtow(char *str)
 {
 	char **str_array;
-	int word_count, word, i, j, k, m = 0;
+	int word_count, word, i, j, k, m;
 
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		if (str[i] == ' ' && str[i - 1] != ' ')
-			word_count++;
-	}
-	if (str[i - 1] != ' ')
-		word_count++;
+	j = 0;
+	word_count = word_counter(str);
 	str_array = (char **)malloc(word_count * sizeof(char *));
 	if (str_array == NULL)
 		return (NULL);
 	for (i = 0; i < word_count; i++)
 	{
-		for (; str[j] != '\0'; j++)
-		{
-			if (str[j] != ' ')
-				word++;
-			if (str[j] != ' ' && (j == 0 || str[j - 1] == ' '))
-				m = j;
-			if (str[j] == ' ' && (j == 0 || str[j - 1] == ' '))
-				continue;
-			if (str[j] == ' ' && str[j - 1] != ' ')
-			{
-				j++;
-				break;
-			}
-		}
+		word = char_count(str, &j, &m);
 		str_array[i] = (char *)malloc((word + 1) * sizeof(char));
 		if (str_array[i] == NULL)
 		{
@@ -52,4 +34,54 @@ char **strtow(char *str)
 		str_array[i][k] = '\0';
 	}
 	return (str_array);
+}
+/**
+ * char_count - count the characters in one word
+ * @str: string
+ * @j: iteration counter
+ * @m: pointer to the index of the beggining of the word in the string
+ *
+ * Return: number of characters in the word
+ */
+int char_count(char *str, int *j, int *m)
+{
+	int word;
+
+	word = 0;
+	for (; str[*(j)] != '\0'; (*(j) = *(j) + 1))
+	{
+		if (str[*(j)] != ' ')
+			word++;
+		if (str[*(j)] != ' ' && (*(j) == 0 || str[*(j) - 1] == ' '))
+			*(m) = *(j);
+		if (str[*(j)] == ' ' && (*(j) == 0 || str[*(j) - 1] == ' '))
+			continue;
+		if (str[*(j)] == ' ' && str[*(j) - 1] != ' ' && str[*(j) - 1] != '\0')
+		{
+			*(j) = *(j) + 1;
+			break;
+		}
+	}
+	return (word);
+}
+
+/**
+ * word_count - counts how many words are there in a string
+ * @str: string
+ *
+ * Return: number of words in the string
+ */
+int word_counter(char *str)
+{
+	int i, word_count;
+
+	word_count = 0;
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] == ' '&& str[i - 1] != ' ' && i < 0)
+			word_count++;
+	}
+	if (str[i - 1] != ' ')
+		word_count++;
+	return (word_count);
 }
