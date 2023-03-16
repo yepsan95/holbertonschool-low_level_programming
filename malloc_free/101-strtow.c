@@ -66,7 +66,7 @@ int char_count(char *str, int *j, int *m)
 }
 
 /**
- * word_count - counts how many words are there in a string
+ * word_counter - counts how many words are there in a string
  * @str: string
  *
  * Return: number of words in the string
