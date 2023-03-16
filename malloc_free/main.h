@@ -6,5 +6,4 @@ int **alloc_grid(int width, int height);
 char *argstostr(int ac, char **av);
 char **strtow(char *str);
 int char_count(char *str, int *j, int *m);
-int word_count(char *str);
-
+int word_counter(char *str);
