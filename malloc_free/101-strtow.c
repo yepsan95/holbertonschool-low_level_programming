@@ -81,7 +81,7 @@ int word_counter(char *str)
 	word_count = 0;
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] == ' ' && str[i - 1] != ' ' && i < 0)
+		if (str[i] == ' ' && str[i - 1] != ' ' && i > 0)
 			word_count++;
 	}
 	if (str[i - 1] != ' ')
