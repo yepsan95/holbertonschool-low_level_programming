@@ -13,7 +13,7 @@ char **strtow(char *str)
 	char **str_array;
 	int word_count, word, i, j, k, m;
 
-	if (str == NULL)
+	if (str == NULL || str == " " || str == "")
 		return (NULL);
 	j = 0;
 	word_count = word_counter(str);
