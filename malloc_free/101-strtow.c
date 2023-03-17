@@ -14,7 +14,7 @@ char **strtow(char *str)
 	char **str_array;
 	int word_count, word, i, j, k, m;
 
-	if (str == NULL || strcmp(str, "") == 0 ||strcmp(str, " "))
+	if (str == NULL || strcmp(str, "") == 0 || strcmp(str, " ") == 0)
 		return (NULL);
 	j = 0;
 	word_count = word_counter(str);
