@@ -35,7 +35,7 @@ char **strtow(char *str)
 			str_array[i][k] = str[m + k];
 		str_array[i][k] = '\0';
 	}
-	str_array[i + 1] = NULL;
+	str_array[i] = NULL;
 	return (str_array);
 }
 /**
