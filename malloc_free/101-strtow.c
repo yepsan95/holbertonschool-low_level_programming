@@ -13,9 +13,11 @@ char **strtow(char *str)
 	char **str_array;
 	int word_count, word, i, j, k, m;
 
+	if (str == NULL)
+		return (NULL);
 	j = 0;
 	word_count = word_counter(str);
-	str_array = (char **)malloc(word_count * sizeof(char *));
+	str_array = (char **)malloc((word_count + 1) * sizeof(char *));
 	if (str_array == NULL)
 		return (NULL);
 	for (i = 0; i < word_count; i++)
@@ -33,6 +35,7 @@ char **strtow(char *str)
 			str_array[i][k] = str[m + k];
 		str_array[i][k] = '\0';
 	}
+	str_array[i + 1] = NULL;
 	return (str_array);
 }
 /**
