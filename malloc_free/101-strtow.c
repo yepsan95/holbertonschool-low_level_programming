@@ -14,10 +14,12 @@ char **strtow(char *str)
 	char **str_array;
 	int word_count, word, i, j, k, m;
 
-	if (str == NULL || strcmp(str, "") == 0 || strcmp(str, " ") == 0)
+	if (str == NULL || strcmp(str, "") == 0)
 		return (NULL);
 	j = 0;
 	word_count = word_counter(str);
+	if (word_count == 0)
+		return (NULL);
 	str_array = (char **)malloc((word_count + 1) * sizeof(char *));
 	if (str_array == NULL)
 		return (NULL);
