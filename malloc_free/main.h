@@ -7,3 +7,4 @@ char *argstostr(int ac, char **av);
 char **strtow(char *str);
 int char_count(char *str, int *j, int *m);
 int word_counter(char *str);
+void print_tab(char **tab);
