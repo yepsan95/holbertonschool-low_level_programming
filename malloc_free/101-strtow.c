@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * strtow - splits a string into words
@@ -12,10 +13,8 @@ char **strtow(char *str)
 {
 	char **str_array;
 	int word_count, word, i, j, k, m;
-	char *space = " ";
-	char *empty = "";
 
-	if (str == NULL || str == space || str == empty)
+	if (str == NULL || strcmp(str, "") == 0 ||strcmp(str, " "))
 		return (NULL);
 	j = 0;
 	word_count = word_counter(str);
