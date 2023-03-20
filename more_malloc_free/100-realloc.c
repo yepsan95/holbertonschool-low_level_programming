@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * realloc - reallocates a memory block using malloc and free
+ * _realloc - reallocates a memory block using malloc and free
  * @ptr: pointer to the emory previously allocated
  * @old_size: size in bytes, of the allocated space for ptr
  * @new_size: new size in bytes, of the new memory block
@@ -12,29 +12,43 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *rtn;
-	char *new_ptr;
-	unsigned int i;
+	void *mem;
+	char *ptr_copy, *filler;
+	unsigned int index;
 
 	if (new_size == old_size)
-		return(ptr);
-	new_ptr = malloc(new_size);
-	if (new_ptr == NULL)
-		return (NULL);
+		return (ptr);
+
 	if (ptr == NULL)
-		return (new_ptr);
-	new_ptr = ptr;
-	if (new_size < old_size)
 	{
-		for (i = 0; i < new_size; i++)
-			new_ptr[i] = ptr[i];
+		mem = malloc(new_size);
+
+		if (mem == NULL)
+			return (NULL);
+
+		return (mem);
 	}
-	else
+
+	if (new_size == 0 && ptr != NULL)
 	{
-		for (i = 0; i < old_size; i++)
-			new_ptr[i] = ptr[i];
+		free(ptr);
+		return (NULL);
 	}
+
+	ptr_copy = ptr;
+	mem = malloc(sizeof(*ptr_copy) * new_size);
+
+	if (mem == NULL)
+	{
+		free(ptr);
+		return (NULL);
+	}
+
+	filler = mem;
+
+	for (index = 0; index < old_size && index < new_size; index++)
+		filler[index] = *ptr_copy++;
+
 	free(ptr);
-	rtn = new_ptr;
-	return (rtn);
+	return (mem);
 }
