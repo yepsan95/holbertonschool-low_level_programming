@@ -9,12 +9,12 @@ void get_prod(char *prod, char *mult, int digit, int zeroes);
 void add_nums(char *final_prod, char *next_prod, int next_len);
 
 /**
- * str_len - Finds the length of a string.
+ * find_len - Finds the length of a string.
  * @str: The string to be measured.
  *
  * Return: The length of the string.
  */
-int str_len(char *str)
+int find_len(char *str)
 {
 	int len = 0;
 
@@ -52,13 +52,13 @@ char *create_xarray(int size)
 }
 
 /**
- * iterate_zero - Iterates through a string of numbers containing
+ * iterate_zeroes - Iterates through a string of numbers containing
  *                  leading zeroes until it hits a non-zero number.
  * @str: The string of numbers to be iterate through.
  *
  * Return: A pointer to the next non-zero element.
  */
-char *iterate_zero(char *str)
+char *iterate_zeroes(char *str)
 {
 	while (*str && *str == '0')
 		str++;
