@@ -42,7 +42,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (owner_copy == NULL)
 	{
 		free(new_dog);
-		free(new_dog->name);
+		free(name_copy);
 		return (NULL);
 	}
 	for (i = 0; i < owner_len; i++)
