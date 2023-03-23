@@ -2,7 +2,7 @@
 #include "3-calc.h"
 
 /**
- * get_op-func - selects the correct functiion to perform
+ * get_op_func - selects the correct functiion to perform
  *               the operation asked by the user
  * @s: operator
  *
