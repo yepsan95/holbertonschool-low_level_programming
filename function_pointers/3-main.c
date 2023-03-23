@@ -24,11 +24,11 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	result = (*get_op_func(argv[2]))(atoi(argv[1]), atoi(argv[3]));
-	if (result == (int)NULL)
+	/**if (result == NULL)
 	{
 		printf("Error\n");
 		exit(99);
-	}
+	}*/
 	printf("%d\n", result);
 	return (0);
 }
