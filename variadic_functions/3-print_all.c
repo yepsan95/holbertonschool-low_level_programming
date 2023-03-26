@@ -11,7 +11,7 @@
 void print_all(const char * const format, ...)
 {
 	va_list p;
-	unsigned int j, k, n;
+	unsigned int j, k;
 	types type[] = {
 		{'c', char_f},
 		{'i', int_f},
@@ -20,12 +20,12 @@ void print_all(const char * const format, ...)
 		{'\0', NULL}
 		};
 
-	va_start(p, n);
+	va_start(p, format);
 
 	j = 0;
-	k = 0;
 	while (format[j] != '\0')
 	{
+		k = 0;
 		while (type[k].type != '\0')
 		{
 			if (format[j] == type[k].type)
@@ -33,6 +33,7 @@ void print_all(const char * const format, ...)
 				(*type[k].func)(&p);
 				if (format[j + 1] != '\0')
 					printf(", ");
+				break;
 			}
 			k++;
 		}
@@ -50,7 +51,7 @@ void print_all(const char * const format, ...)
  */
 void char_f(va_list *p)
 {
-	printf("%c", va_arg(*(p), char));
+	printf("%c", va_arg(*(p), int));
 }
 
 /**
@@ -72,7 +73,7 @@ void int_f(va_list *p)
  */
 void float_f(va_list *p)
 {
-	printf("%f", va_arg(*(p), float));
+	printf("%f", va_arg(*(p), double));
 }
 
 /**
