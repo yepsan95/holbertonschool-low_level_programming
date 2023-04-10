@@ -8,14 +8,12 @@
  */
 size_t print_list(const list_t *h)
 {
-	list_t *node;
-	int counter;
+	size_t counter;
 
-	node = h;
-	for (counter = 1; node->next != NULL; counter++)
+	for (counter = 0; h->next != NULL; counter++)
 	{
-		printf("[%d] %s\n", node->len, node->str);
-		node = node->next;
+		printf("[%d] %s\n", h->len, h->str);
+		h = h->next;
 	}
 	return (counter);
 }
