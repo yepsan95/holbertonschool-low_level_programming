@@ -10,7 +10,7 @@ size_t print_list(const list_t *h)
 {
 	size_t counter;
 
-	for (counter = 0; h->next != NULL; counter++)
+	for (counter = 0; h != NULL; counter++)
 	{
 		printf("[%d] %s\n", h->len, h->str);
 		h = h->next;
