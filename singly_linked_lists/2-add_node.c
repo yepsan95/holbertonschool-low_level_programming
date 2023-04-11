@@ -11,8 +11,6 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new_node;
-	char *new_str;
-	unsigned int i, len;
 
 	if ((*head) == NULL || str == NULL)
 		return (NULL);
