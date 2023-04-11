@@ -14,7 +14,7 @@ list_t *add_node(list_t **head, const char *str)
 	char *new_str;
 	unsigned int i, len;
 
-	if (head == NULL || str == NULL)
+	if ((*head) == NULL || str == NULL)
 		return (NULL);
 	len = 0;
 	while (str[len] != '\0')
@@ -30,9 +30,9 @@ list_t *add_node(list_t **head, const char *str)
 		free(new_str);
 		return (NULL);
 	}
-	new_node->str = new_str;
-	new_node->len = len;
-	new_node->next = (*head);
+	new_node.str = new_str;
+	new_node.len = len;
+	new_node.next = (*head);
 
 	return (new_node);
 }
