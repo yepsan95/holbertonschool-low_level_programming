@@ -2,7 +2,7 @@
 
 /**
 * insert_dnodeint_at_index - inserts a new node in a given position
-* @head: head of the dlistint_t list
+* @h: head of the dlistint_t list
 * @idx: index of the new node to be inserted
 * @n: value of the new node in the list
 *
