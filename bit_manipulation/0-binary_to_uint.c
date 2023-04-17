@@ -27,14 +27,10 @@ unsigned int binary_to_uint(const char *b)
 	i++;
 	while (b[i] != '\0')
 	{
-		if (b[i] == '1')
+		if (b[i] == '1' || b[i] == '0')
 		{
 			number = number << 1;
 			number = number | (b[i] - 48);
-		}
-		else if (b[i] == '0')
-		{
-			number = number << 1;
 		}
 		else
 		{
