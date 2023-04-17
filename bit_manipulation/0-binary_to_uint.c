@@ -12,12 +12,11 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int number;
-	int i, first_one_index, last_index;
+	int i;
 
 	i = 0;
 	while (b[i] != '1')
 		i++;
-	first_one_index = i;
 
 	number = 0;
 	while (b[i] != '\0')
