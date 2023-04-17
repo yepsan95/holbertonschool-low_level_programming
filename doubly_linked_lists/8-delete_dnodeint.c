@@ -10,7 +10,7 @@
 */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *new_node;
+	dlistint_t *temp;
 	unsigned int i;
 
 	temp = *head;
