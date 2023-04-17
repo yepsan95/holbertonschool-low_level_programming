@@ -14,13 +14,33 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int number;
 	int i;
 
-	i = 0;
-	while (b[i] != '1')
-		i++;
-
-	number = 0;
+	if (b == '\0')
+		return (0);
+	for (i = 0; b[i] == '\0'; i++)
+	{
+		if (b[i] == '1')
+			break;
+	}
+	if (b[i] == '\0')
+		return (0);
+	number = 1;
+	i++;
 	while (b[i] != '\0')
-		number = (b[i] & 1) << 1;
+	{
+		if (b[i] == '1')
+		{
+			number = number << 1;
+			number = number | (b[i] - 48);
+		}
+		else if (b[i] == '0')
+		{
+			number = number << 1;
+		}
+		else
+		{
+			return (0);
+		}
+	}
 
 	return (number);
 }
