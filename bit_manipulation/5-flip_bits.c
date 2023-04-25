@@ -17,7 +17,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	
 	for (flip = n ^ m; flip > 0 ; flip = flip << 1)
 	{
-		if (flip & 1 == 1)
+		if ((flip & 1) == 1)
 			count++;
 	}
 
