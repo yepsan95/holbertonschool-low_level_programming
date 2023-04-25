@@ -9,13 +9,11 @@
 */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int n_copy, len, i;
+	unsigned long int len, i;
 
-	len = 0;
+	len = sizeof(unsigned long int);
 	n_copy = n;
 
-	for (n_copy = n; n_copy > 0; n_copy = n_copy >> 1)
-		len++;
 	if (index >= len)
 		return (-1);
 
