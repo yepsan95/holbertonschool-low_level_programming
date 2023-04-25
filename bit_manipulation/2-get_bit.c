@@ -14,10 +14,10 @@ int get_bit(unsigned long int n, unsigned int index)
 	len = 0;
 	n_copy = n;
 
-	for (n_copy = n; n_copy > 0; n_copy >> 1)
+	for (n_copy = n; n_copy > 0; n_copy = n_copy >> 1)
 		len++;
 	for (i = 0; i < (len - index - 1); i++)
-		n >> 1;
+		n = n >> 1;
 
 	return (n & 1);
 }
