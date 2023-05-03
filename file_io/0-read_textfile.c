@@ -29,7 +29,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (letters > (unsigned long int)file_size)
 		letters = file_size;
 	read(fd, buffer, letters);
-	n_bytes = write(1, buffer, letters);
+	n_bytes = write(2, buffer, letters);
 	close(fd);
 
 	return (n_bytes);
