@@ -13,7 +13,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	char *buffer;
-	size_t i;
 	ssize_t n_bytes;
 	off_t file_size;
 	struct stat st;
@@ -27,14 +26,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	stat(filename, &st);
 	file_size = st.st_size;
-	if (letters > (long unsigned int)file_size)
+	if (letters > (unsigned long int)file_size)
 		letters = file_size;
 	read(fd, buffer, letters);
-	i = 0;
-	while (i < letters)
-		i++;
-	if (buffer[i] != -1)
-		buffer[i] = -1;
 	n_bytes = write(1, buffer, letters);
 	close(fd);
 
