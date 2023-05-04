@@ -52,7 +52,7 @@ int main(int ac, char **av)
  */
 void exit_97(char *filename)
 {
-	dprintf(2, "Usage: %s file_from file_to\n", filename);
+	dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", filename);
 	exit(97);
 }
 
@@ -66,7 +66,7 @@ void exit_97(char *filename)
  */
 void exit_98(char *file_from)
 {
-	dprintf(2, "Error: Can't read from file %s\n", file_from);
+	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 	exit(98);
 }
 
@@ -80,7 +80,7 @@ void exit_98(char *file_from)
  */
 void exit_99(char *file_to)
 {
-	dprintf(2, "Error: Can't write to %s\n", file_to);
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 	exit(99);
 }
 
@@ -93,6 +93,6 @@ void exit_99(char *file_to)
  */
 void exit_100(int fd)
 {
-	dprintf(2, "Error: Can't close fd %d\n", fd);
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 	exit(100);
 }
