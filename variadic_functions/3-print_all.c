@@ -31,9 +31,11 @@ void print_all(const char * const format, ...)
 		{
 			if (format[j] == type[k].type)
 			{
-				printf("%s", delimitador)
+				printf("%s", delimitador);
 				(*type[k].func)(&p);
-				delimitador = ", ";
+				delimitador[0] = ' ';
+				delimitador[1] = ',';
+				delimitador[2] = '\0';
 				break;
 			}
 			k++;
