@@ -33,8 +33,8 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", delimitador);
 				(*type[k].func)(&p);
-				delimitador[0] = ' ';
-				delimitador[1] = ',';
+				delimitador[0] = ',';
+				delimitador[1] = ' ';
 				delimitador[2] = '\0';
 				break;
 			}
