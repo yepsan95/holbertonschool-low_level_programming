@@ -10,6 +10,7 @@
  */
 void print_all(const char * const format, ...)
 {
+	char delimitador[3] = "";
 	va_list p;
 	unsigned int j, k;
 	types type[] = {
@@ -30,9 +31,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[j] == type[k].type)
 			{
+				printf("%s", delimitador)
 				(*type[k].func)(&p);
-				if (format[j + 1] != '\0')
-					printf(", ");
+				delimitador = ", ";
 				break;
 			}
 			k++;
