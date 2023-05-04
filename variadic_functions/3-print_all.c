@@ -21,29 +21,32 @@ void print_all(const char * const format, ...)
 		{'\0', NULL}
 		};
 
-	va_start(p, format);
-
-	j = 0;
-	while (format[j])
+	if (format != NULL)
 	{
-		k = 0;
-		while (type[k].type != '\0')
+		va_start(p, format);
+
+		j = 0;
+		while (format[j])
 		{
-			if (format[j] == type[k].type)
+			k = 0;
+			while (type[k].type != '\0')
 			{
-				printf("%s", delimitador);
-				(*type[k].func)(&p);
-				delimitador[0] = ',';
-				delimitador[1] = ' ';
-				delimitador[2] = '\0';
-				break;
+				if (format[j] == type[k].type)
+				{
+					printf("%s", delimitador);
+					(*type[k].func)(&p);
+					delimitador[0] = ',';
+					delimitador[1] = ' ';
+					delimitador[2] = '\0';
+					break;
+				}
+				k++;
 			}
-			k++;
+			j++;
 		}
-		j++;
+		va_end(p);
 	}
 	putchar(10);
-	va_end(p);
 }
 
 /**
