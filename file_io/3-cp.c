@@ -1,63 +1,92 @@
 #include "main.h"
 /**
- * main - entry point
- * @argc: number of arguments
- * @argv: array of arguments
+ * main - copies the content of a file to another file
+ * @ac: number of arguments
+ * @av: array of arguments
  *
  * Return: 0 on success
  */
 int main(int ac, char **av)
 {
-	int res;
+	int fd1, fd2, len;
+	char *file_from, *file_to, buffer[1024];
+	struct stat st;
 
 	if (ac != 3)
-	{
-		dprintf(2, "Usage: %s file_from file_to\n", av[0]);
-		exit(97);
-	}
-	res = cp(av[1], av[2]);
-	printf("-> %i)\n", res);
+		exit_97(av[0]);
+	file_from = av[1];
+	file_to = av[2];
+	fd1 = open(file_from, O_RDONLY, S_IRUSR | S_IWUSR);
+	if (fd1 == -1)
+		exit_98(av[1]);
+	fd2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 436);
+	if (fd2 == -1)
+		exit_99(av[2]);
+	fstat(fd1, &st);
+	len = st.st_size;
+	if (read(fd1, buffer, len) == -1)
+		exit_98(av[1]);
+	if (write(fd2, buffer, len) == -1)
+		exit_99(av[2]);
+	if (close(fd1) == -1)
+		exit_100(fd1);
+	if (close(fd2) == -1)
+		exit_100(fd2);
+
 	return (0);
 }
 
 /**
- * cp - copies the content of a file to another file
- * @file1: name of the file from which the text will be copied
- * @file2: name of the file to where the text will be copied
- * @text_content: NULL terminated string to append to the file
+ * exit_97 - exits the program with code 97 and prints a message
+ *           Use case: if the number of arguments passed to the
+ *           program is not 2
+ * @filename: name of the executable file
  *
- * Return: 1 on success, -1 on failiure
+ * Return: void
  */
-int cp(const char *file_from, const char *file_to)
+void exit_97(char *filename)
 {
-	int fd1, fd2, len;
-	char buffer[1024];
+	dprintf(2, "Usage: %s file_from file_to\n", filename);
+	exit(97);
+}
 
-	if (file_from == NULL || file_to == NULL)
-		return (-1);
+/**
+ * exit_98 - exits the program with code 98 and prints a message
+ *           Use case: if file_from does not exits, or if you
+ *           can not read it
+ * @file_from: name of the file whose contents are to be copied
+ *
+ * Return: void
+ */
+void exit_98(char *file_from)
+{
+	dprintf(2, "Error: Can't read from file %s\n", file_from);
+	exit(98);
+}
 
-	fd1 = open(file_from, O_RDONLY, S_IRUSR | S_IWUSR);
-	if (fd1 == -1)
-		return (-1);
-	fd2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 436);
-	if (fd2 == -1)
-		return (-1);
-	if (read(fd1, buffer, 1024) == -1)
-	{
-		close(fd1);
-		close(fd2);
-		exit(98);
-	}
-	for (len = 0; buffer[len] != '\0';)
-		len++;
-	if (write(fd2, buffer, len) == -1)
-	{
-		close(fd1);
-		close(fd2);
-		exit(99);
-	}
-	close(fd1);
-	close(fd2);
+/**
+ * exit_99 - exits the program with code 99 and prints a message
+ *           Use case: if you can not create or if write to
+ *           file_to fails
+ * @file_to: name of the file where the contents will be copied
+ *
+ * Return: void
+ */
+void exit_99(char *file_to)
+{
+	dprintf(2, "Error: Can't write to %s\n", file_to);
+	exit(99);
+}
 
-	return (1);
+/**
+ * exit_100 - exits the program with code 100 and prints a message
+ *            Use case: if a file descriptor can not be closed
+ * @fd: number of the file descriptor
+ *
+ * Return: void
+ */
+void exit_100(int fd)
+{
+	dprintf(2, "Error: Can't close fd %d\n", fd);
+	exit(100);
 }
