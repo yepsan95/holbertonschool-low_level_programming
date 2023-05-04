@@ -13,7 +13,7 @@ int main(int ac, char **av)
 	struct stat st;
 
 	if (ac != 3)
-		exit_97(av[0]);
+		exit_97("cp");
 	file_from = av[1];
 	file_to = av[2];
 	fd1 = open(file_from, O_RDONLY, S_IRUSR | S_IWUSR);
