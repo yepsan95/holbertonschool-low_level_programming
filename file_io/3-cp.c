@@ -24,7 +24,7 @@ int main(int ac, char **av)
 		exit_99(av[2]);
 	fstat(fd1, &st);
 	len = st.st_size;
-	if (read(fd1, buffer, len) == -1)
+	if (read(fd1, buffer, 1024) == -1)
 		exit_98(av[1]);
 	if (write(fd2, buffer, len) == -1)
 		exit_99(av[2]);
