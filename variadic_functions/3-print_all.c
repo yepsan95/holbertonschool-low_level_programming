@@ -20,6 +20,12 @@ void print_all(const char * const format, ...)
 		{'\0', NULL}
 		};
 
+	if (format == NULL)
+	{
+		printf("\n");
+		return;
+	}
+
 	va_start(p, format);
 
 	j = 0;
